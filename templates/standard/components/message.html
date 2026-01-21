@@ -1,19 +1,16 @@
 <section class="message" id="message">
     <div class="container">
-        <div class="message-box">
+        <div class="message-box fade-up">
             <h3 class="section-title">{{ message.title }}</h3>
-            <div class="message-body"
-                style="display: flex; gap: 30px; align-items: center; justify-content: center; flex-wrap: wrap;">
+            <div class="message-body">
                 {% if message.image_url %}
-                <div class="message-image" style="flex: 0 0 200px;">
-                    <img src="{{ message.image_url }}" alt="{{ message.doctor_name }}"
-                        style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; border: 3px solid var(--accent-color);">
+                <div class="message-image">
+                    <img src="{{ message.image_url }}" alt="{{ message.doctor_name }}">
                 </div>
                 {% endif %}
-                <div class="message-content" style="flex: 1; min-width: 300px;">
-                    <p>{{ message.content | nl2br }}</p>
-                    <div class="message-author" style="margin-top: 15px; font-weight: bold; text-align: right;">{{
-                        message.doctor_name }}</div>
+                <div class="message-content">
+                    <p class="message-text">{{ message.content | nl2br }}</p>
+                    <div class="message-author">{{ message.doctor_name }}</div>
                 </div>
             </div>
         </div>

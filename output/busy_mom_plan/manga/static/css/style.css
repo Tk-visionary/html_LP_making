@@ -3,6 +3,7 @@
 :root {
 
     /* Base Theme from JSON (Dynamic) */
+    /* Base Theme from JSON (Dynamic) */
     --primary-color: {
             {
             theme.primary_color
@@ -24,6 +25,8 @@
             theme.cta_color
         }
     }
+
+    ;
 
     ;
     --text-color: #000;
@@ -510,6 +513,8 @@ section {
     position: relative;
     line-height: 0;
     /* Remove gap below image */
+    container-type: inline-size;
+    /* Enable container queries */
 }
 
 .comic-frame img {
@@ -537,17 +542,19 @@ section {
     position: absolute;
     background: #fff;
     border: 3px solid #000;
-    padding: 15px 15px;
+    /* padding: 15px 15px; --> Scale padding */
+    padding: 3cqw 3cqw;
     border-radius: 50%;
     font-weight: bold;
-    font-size: 1.0rem;
+    /* font-size: 1.0rem; --> Scale font */
+    font-size: clamp(10px, 4cqw, 24px);
     color: #000;
     text-align: center;
-    /* In vertical mode, specific align might be needed */
     box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
     z-index: 10;
-    min-width: 80px;
-    min-height: 120px;
+    /* min-width: 80px; --> Scale min-width */
+    min-width: 15cqw;
+    min-height: 20cqw;
     transform: translate(-50%, -50%);
 
     /* VERTICAL TEXT SUPPORT */
@@ -650,6 +657,11 @@ section {
     padding: 25px;
 }
 
+/* Hide connector line on mobile (Manga) */
+.flow-steps::before {
+    display: none !important;
+}
+
 /* Campaign Box (Hybrid Image + Text) */
 .campaign-section {
     padding: 40px 0;
@@ -712,4 +724,111 @@ section {
 .campaign-cta-wrapper {
     text-align: center;
     margin-top: 30px;
+}
+
+/* Message Component (Manga Style) */
+.message-box {
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.message-body {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.message-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 3px solid #000;
+    object-fit: cover;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.message-author {
+    margin-top: 15px;
+    text-align: right;
+    font-weight: bold;
+    font-family: var(--font-base);
+    /* Comic font */
+}
+
+@media (max-width: 768px) {
+    .message-body {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Sticky Horizontal Scroll (Apple Style) - Manga */
+.sticky-flow-container {
+    height: 300vh;
+    position: relative;
+}
+
+.sticky-flow-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.sticky-flow-track {
+    display: flex;
+    gap: 80px;
+    /* Wider gap for desktop */
+    padding-left: calc(50vw - 400px);
+    padding-right: calc(50vw - 220px);
+    /* Increased padding to center last card visually (User feedback) */
+    will-change: transform;
+}
+
+.flow-step {
+    flex: 0 0 600px;
+    /* Significantly wider on desktop */
+    width: 600px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 8px 8px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0.5;
+    transform: scale(0.9);
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.flow-step.is-active {
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+@media (max-width: 768px) {
+    .sticky-flow-track {
+        gap: 20px;
+        padding-left: 7.5vw;
+        padding-right: 7.5vw;
+    }
+
+    .flow-step {
+        flex: 0 0 85vw;
+        width: 85vw;
+        border-radius: 12px;
+        padding: 20px;
+    }
 }

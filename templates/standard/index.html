@@ -14,6 +14,10 @@
 {% set trouble = section.data %}
 {% include "components/trouble.html" %}
 
+{% elif section.type == 'campaign_box' or section.type == 'campaign' %}
+{% set campaign = section.data %}
+{% include "components/campaign_box.html" %}
+
 {% elif section.type == 'solution' %}
 {% set solution = section.data %}
 {% include "components/solution.html" %}

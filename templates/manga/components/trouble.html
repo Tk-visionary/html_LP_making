@@ -2,7 +2,7 @@
     <div class="container">
         <h3 class="section-title">{{ trouble.title }}</h3>
         <div class="trouble-box element-stack">
-            <div class="trouble-list">
+            <div class="trouble-list fade-up">
                 <ul>
                     {% for item in trouble.checklist %}
                     <li>
@@ -11,7 +11,7 @@
                     {% endfor %}
                 </ul>
             </div>
-            <div class="trouble-image">
+            <div class="trouble-image fade-up">
                 <img src="{{ trouble.image_url }}" alt="Trouble Image" loading="lazy">
             </div>
         </div>

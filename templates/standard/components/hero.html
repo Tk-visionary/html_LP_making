@@ -1,8 +1,8 @@
 <section class="hero-ad" id="hero" style="background-image: url('{{ hero.image_url }}');">
     <div class="container">
         <div class="hero-content">
-            <h2 class="hero-headline">{{ hero.headline | safe }}</h2>
-            <p class="hero-subheadline">{{ hero.subheadline | nl2br }}</p>
+            <h2 class="hero-headline">{{ hero.title | safe }}</h2>
+            <p class="hero-subheadline">{{ hero.subtitle | nl2br }}</p>
             <a href="{{ hero.cta.url }}" class="btn btn-cta btn-lg pulse-anim">{{ hero.cta.text }}</a>
         </div>
     </div>

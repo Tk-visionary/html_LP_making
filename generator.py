@@ -97,6 +97,59 @@ def generate_site(input_file, style="standard"):
         print(f"Error loading template 'index.html' for style '{style}': {e}")
         return
 
+    # 2.5 Generate Coupon Image (Before Rendering)
+    # We need to know output paths ahead of time or use temporary
+    # Actually, we need to know the target style output dir for proper relative paths?
+    # But wait, 'output_static_dir' isn't defined yet in the original code flow...
+    # We can define it early.
+
+    plan_name = os.path.splitext(os.path.basename(input_file))[0]
+    target_output_dir = os.path.join(OUTPUT_DIR, plan_name, style)
+    if not os.path.exists(target_output_dir):
+        os.makedirs(target_output_dir)
+    output_static_dir = os.path.join(target_output_dir, 'static')
+        
+    if 'coupon' in data:
+        print("Generating Coupon Image...")
+        try:
+            from coupon_generator import CouponRenderer
+            renderer = CouponRenderer()
+            
+            # Ensure images/generated/{plan_name} exists
+            output_img_dir = os.path.join(output_static_dir, f"images/generated/{plan_name}")
+            if not os.path.exists(output_img_dir):
+                os.makedirs(output_img_dir)
+            
+            output_coupon_path = os.path.join(output_img_dir, 'coupon.png')
+            success = renderer.generate(data['coupon'], output_coupon_path)
+            
+            if success:
+                # Calculate relative path for HTML use
+                rel_path = f"static/images/generated/{plan_name}/coupon.png"
+                print(f"Coupon generated successfully at {output_coupon_path}")
+                
+                # Update campaign image URL in data object (In-memory update for Jinja)
+                found_campaign = False
+                
+                # Strategy 1: Top-level 'campaign' key (if used)
+                if 'campaign' in data:
+                    data['campaign']['image_url'] = rel_path
+                    found_campaign = True
+                
+                # Strategy 2: 'sections' list (standard/manga structure)
+                if 'sections' in data:
+                    for section in data['sections']:
+                        if section['type'] == 'campaign_box' or section['type'] == 'campaign':
+                            section['data']['image_url'] = rel_path
+                            found_campaign = True
+                            
+                if found_campaign:
+                    print(f"Updated campaign image URL to: {rel_path}")
+                else:
+                    print("Warning: Generated coupon but could not find a campaign section to attach it to.")
+        except Exception as e:
+            print(f"Error generating coupon: {e}")
+
     # 3. Render HTML
     print("Rendering HTML...")
     output_html = template.render(**data)
@@ -166,7 +219,53 @@ def generate_site(input_file, style="standard"):
         with open(css_file_path, 'w', encoding='utf-8') as f:
             f.write(output_css)
         print(f"CSS generated at {css_file_path}")
-        
+
+    # 7. Generate Coupon Image (If configured)
+    if 'coupon' in data:
+        print("Generating Coupon Image...")
+        try:
+            from coupon_generator import CouponRenderer
+            renderer = CouponRenderer()
+            
+            # Ensure images/generated/{plan_name} exists
+            output_img_dir = os.path.join(output_static_dir, f"images/generated/{plan_name}")
+            if not os.path.exists(output_img_dir):
+                os.makedirs(output_img_dir)
+            
+            output_coupon_path = os.path.join(output_img_dir, 'coupon.png')
+            success = renderer.generate(data['coupon'], output_coupon_path)
+            
+            if success:
+                # Calculate relative path for HTML use
+                # output_static_dir is .../static
+                # we saved to .../static/images/generated/{plan_name}/coupon.png
+                # relative path: static/images/generated/{plan_name}/coupon.png
+                rel_path = f"static/images/generated/{plan_name}/coupon.png"
+                print(f"Coupon generated successfully at {output_coupon_path}")
+                
+                # Update campaign image URL in data object (In-memory update for Jinja)
+                # Structure varies by plan/template. We attempt to find a 'campaign' or 'campaign_box' section.
+                found_campaign = False
+                
+                # Strategy 1: Top-level 'campaign' key (if used)
+                if 'campaign' in data:
+                    data['campaign']['image_url'] = rel_path
+                    found_campaign = True
+                
+                # Strategy 2: 'sections' list (standard/manga structure)
+                if 'sections' in data:
+                    for section in data['sections']:
+                        if section['type'] == 'campaign_box' or section['type'] == 'campaign':
+                            section['data']['image_url'] = rel_path
+                            found_campaign = True
+                            
+                if found_campaign:
+                    print(f"Updated campaign image URL to: {rel_path}")
+                else:
+                    print("Warning: Generated coupon but could not find a campaign section to attach it to.")
+                    
+        except Exception as e:
+            print(f"Error generating coupon: {e}")
 
     print("Success! LP generation complete.")
 

@@ -11,6 +11,47 @@
         "title": "【公式】東京美肌堂 | オンライン診療ではじめる美容内服",
         "description": "東京美肌堂は美肌領域に特化したオンライン診療サービスです。"
     },
+    "coupon": {
+        "template": "gold",
+        "shape": "ticket",
+        "elements": {
+            "target": {
+                "text": "初めての方全員",
+                "y": 0.08,
+                "size": 36,
+                "color": "#ffffff",
+                "bg_color": null
+            },
+            "subtitle": {
+                "text": "＼ 今すぐ使える ／",
+                "y": 0.21,
+                "size": 40,
+                "color": "#333333"
+            },
+            "amount": {
+                "text": "3,000",
+                "x": 0.6,
+                "y": 0.4,
+                "size": 180,
+                "color": "#e60012",
+                "align": "right"
+            },
+            "unit": {
+                "text": "円",
+                "x": 0.62,
+                "y": 0.52,
+                "size": 60,
+                "color": "#e60012",
+                "align": "left"
+            },
+            "message": {
+                "text": "クーポンが発行されました",
+                "y": 0.82,
+                "size": 40,
+                "color": "#ff8c00"
+            }
+        }
+    },
     "footer": {
         "copyright": "© Tokyo Bihadado"
     },
@@ -29,6 +70,14 @@
                     "text": "オンライン診療の予約はこちら",
                     "url": "https://system.bihadado.tokyo/reservation-form/reserve7?ad_code=official00&flow_type=0&line_flow=7"
                 }
+            }
+        },
+        {
+            "type": "campaign_box",
+            "data": {
+                "image_url": "",
+                "title": "期間限定キャンペーン",
+                "link": "https://system.bihadado.tokyo/reservation-form/reserve7?ad_code=official00&flow_type=0&line_flow=7"
             }
         },
         {

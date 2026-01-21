@@ -11,6 +11,47 @@
         "title": "ママの肌荒れ、諦めないで | 東京美肌堂",
         "description": "忙しいママへ。皮膚科に行けなくても、スマホで隙間時間に美肌治療。"
     },
+    "coupon": {
+        "template": "pink",
+        "shape": "ticket",
+        "elements": {
+            "target": {
+                "text": "ママ限定",
+                "y": 0.08,
+                "size": 36,
+                "color": "#ffffff",
+                "bg_color": null
+            },
+            "subtitle": {
+                "text": "＼ 育児の合間に ／",
+                "y": 0.21,
+                "size": 40,
+                "color": "#333333"
+            },
+            "amount": {
+                "text": "7,000",
+                "x": 0.6,
+                "y": 0.4,
+                "size": 180,
+                "color": "#e27d60",
+                "align": "right"
+            },
+            "unit": {
+                "text": "円",
+                "x": 0.62,
+                "y": 0.52,
+                "size": 60,
+                "color": "#e27d60",
+                "align": "left"
+            },
+            "message": {
+                "text": "クーポン発行中",
+                "y": 0.82,
+                "size": 40,
+                "color": "#e27d60"
+            }
+        }
+    },
     "footer": {
         "copyright": "© Tokyo Bihadado"
     },
@@ -172,6 +213,38 @@
                         "title": "グルタチオン",
                         "description": "白玉点滴の主成分。強力な抗酸化作用で美白・デトックス。",
                         "icon": "💊"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "flow",
+            "data": {
+                "title": "オンライン診療の流れ",
+                "steps": [
+                    {
+                        "step": 1,
+                        "title": "LINEで予約",
+                        "description": "公式LINEを友だち追加して、希望の日時を選択して予約完了。",
+                        "image_url": "https://bihadado.tokyo/images/top/online_flow_step_1.png"
+                    },
+                    {
+                        "step": 2,
+                        "title": "医師の診察",
+                        "description": "予約時間にビデオ通話で診察開始。肌悩みを相談してください。",
+                        "image_url": "https://bihadado.tokyo/images/top/online_flow_step_2.png"
+                    },
+                    {
+                        "step": 3,
+                        "title": "処方・決済",
+                        "description": "診察後、あなたに合った処方プランをご提案・決済。",
+                        "image_url": "https://bihadado.tokyo/images/top/online_flow_step_3.png"
+                    },
+                    {
+                        "step": 4,
+                        "title": "お薬のお届け",
+                        "description": "ご自宅のポストなど、指定の場所に配送します。",
+                        "image_url": "https://bihadado.tokyo/images/top/online_flow_step_4.png"
                     }
                 ]
             }

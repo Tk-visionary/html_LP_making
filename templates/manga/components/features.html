@@ -11,7 +11,7 @@
         <div class="features-grid">
             {% set items = features.data if (features is mapping and features.data) else features %}
             {% for feature in items %}
-            <div class="feature-item">
+            <div class="feature-item fade-up">
                 <div class="feature-icon">
                     {% if feature.icon_url %}
                     <img src="{{ feature.icon_url }}" alt="{{ feature.title }}" loading="lazy">

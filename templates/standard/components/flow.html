@@ -1,23 +1,29 @@
 <section class="flow" id="flow">
     <div class="container">
         <h3 class="section-title">{{ flow.title }}</h3>
-        <div class="flow-steps">
-            {% for step in flow.steps %}
-            <div class="flow-step">
-                <div class="step-header">
-                    <div class="step-number">STEP {{ step.step }}</div>
-                    {% if step.image_url %}
-                    <div class="step-image">
-                        <img src="{{ step.image_url }}" alt="{{ step.title }}" loading="lazy">
+    </div>
+
+    <!-- Sticky Scroll Container (Height defines scroll length) -->
+    <div class="sticky-flow-container">
+        <div class="sticky-flow-wrapper">
+            <div class="sticky-flow-track">
+                {% for step in flow.steps %}
+                <div class="flow-step">
+                    <div class="step-header">
+                        <div class="step-number">STEP {{ step.step }}</div>
+                        {% if step.image_url %}
+                        <div class="step-image">
+                            <img src="{{ step.image_url }}" alt="{{ step.title }}" loading="lazy">
+                        </div>
+                        {% endif %}
                     </div>
-                    {% endif %}
+                    <div class="step-content">
+                        <h4>{{ step.title }}</h4>
+                        <p>{{ step.description }}</p>
+                    </div>
                 </div>
-                <div class="step-content">
-                    <h4>{{ step.title }}</h4>
-                    <p>{{ step.description }}</p>
-                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
     </div>
 </section>

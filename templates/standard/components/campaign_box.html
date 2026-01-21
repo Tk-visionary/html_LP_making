@@ -1,0 +1,21 @@
+<section class="campaign-section fade-up">
+    <div class="container">
+        <div class="campaign-box">
+            {% if campaign.image_url %}
+            <div class="campaign-visual">
+                <img src="{{ campaign.image_url }}" alt="Campaign Coupon">
+            </div>
+            {% endif %}
+
+            {% if campaign.cta %}
+            <div class="campaign-cta-wrapper">
+                <a href="{{ campaign.cta.url }}" class="btn btn-cta pulse-anim">{{ campaign.cta.text }}</a>
+            </div>
+            {% elif campaign.link %}
+            <div class="campaign-cta-wrapper">
+                <a href="{{ campaign.link }}" class="btn btn-cta pulse-anim">クーポンを受け取る</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

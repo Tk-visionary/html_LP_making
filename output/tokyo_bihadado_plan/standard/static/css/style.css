@@ -1,4 +1,6 @@
 :root {
+
+    /* Base Theme from JSON (Dynamic) */
     --primary-color: {
             {
             theme.primary_color | default('#d8a0a6')
@@ -11,6 +13,40 @@
     --accent-color: {
             {
             theme.accent_color | default('#c95d6b')
+        }
+    }
+
+    ;
+
+    /* Emphasis color */
+    --cta-color: {
+            {
+            theme.cta_color | default('#e8c65c')
+        }
+    }
+
+    ;
+
+    /* Button color */
+    --text-color: {
+            {
+            theme.text_color | default('#333333')
+        }
+    }
+
+    ;
+
+    --light-text: {
+            {
+            theme.light_text_color | default('#666666')
+        }
+    }
+
+    ;
+
+    --bg-color: {
+            {
+            theme.bg_color | default('#ffffff')
         }
     }
 
@@ -129,6 +165,34 @@ img {
     width: 100%;
     max-width: 400px;
     border-bottom: 4px solid #cc8400;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-cta::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+    transform: skewX(-25deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        left: -100%;
+    }
+
+    20% {
+        left: 100%;
+    }
+
+    100% {
+        left: 100%;
+    }
 }
 
 .btn-cta:active {
@@ -293,6 +357,13 @@ img {
     width: 300px;
     text-align: center;
     padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .feature-icon {
@@ -306,6 +377,34 @@ img {
     color: var(--accent-color);
 }
 
+/* Campaign Box */
+.campaign-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.campaign-box {
+    background: #fffafa;
+    /* Light pinkish white */
+    border: 3px solid var(--accent-color);
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-visual img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.campaign-cta-wrapper {
+    margin-top: 30px;
+}
+
 /* Flow */
 .flow {
     padding: 80px 0;
@@ -313,24 +412,98 @@ img {
 }
 
 .flow-steps {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    position: relative;
+}
+
+/* Horizontal Connector Line (Desktop) */
+.flow-steps::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    /* Adjust based on step-number height */
+    left: 50px;
+    right: 50px;
+    height: 4px;
+    background: #e0e0e0;
+    z-index: 0;
 }
 
 .flow-step {
     background: #fff;
-    padding: 30px;
-    margin-bottom: 20px;
+    padding: 30px 20px;
     border-radius: 10px;
     position: relative;
-    border-left: 5px solid var(--primary-color);
+    z-index: 1;
+    /* Above line */
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid var(--primary-color);
+    border-left: none;
+    /* Reset old style */
 }
 
 .step-number {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    color: var(--primary-color);
-    margin-bottom: 10px;
+    color: #fff;
+    background: var(--primary-color);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    line-height: 60px;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 0 0 5px #fff;
+    /* White ring to mask line */
+}
+
+.step-image img {
+    margin-bottom: 15px;
+    border-radius: 5px;
+    max-height: 120px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .flow-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .flow-steps::before {
+        /* Vertical line */
+        top: 30px;
+        bottom: 30px;
+        left: 40px;
+        /* Adjust based on padding/number */
+        width: 4px;
+        height: auto;
+        right: auto;
+    }
+
+    .flow-step {
+        display: flex;
+        align-items: flex-start;
+        text-align: left;
+        padding: 20px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .step-number {
+        margin: 0;
+        flex-shrink: 0;
+    }
+
+    .step-content {
+        flex: 1;
+    }
 }
 
 /* Pricing, FAQ, Terms, etc. omit for brevity but essentially clean styles */
@@ -473,4 +646,132 @@ img {
 .cta-main-text {
     font-size: 1.4rem;
     font-weight: bold;
+}
+
+/* Message Component */
+.message {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.message-box {
+    background: #fff;
+    border: 3px solid var(--accent-color);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+}
+
+.message-body {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.message-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.message-author {
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .message-body {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .message-image img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .message-author {
+        text-align: center;
+    }
+}
+
+/* Sticky Horizontal Scroll (Apple Style) */
+.sticky-flow-container {
+    height: 300vh;
+    /* Define total scroll distance needed */
+    position: relative;
+}
+
+.sticky-flow-wrapper {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    /* Ensure content doesn't overlap */
+}
+
+.sticky-flow-track {
+    display: flex;
+    gap: 80px;
+    /* Wider gap for desktop */
+    padding-left: calc(50vw - 400px);
+    /* Start shifted left (User request) */
+    padding-right: calc(50vw - 300px);
+    /* End centered */
+    will-change: transform;
+}
+
+.flow-step {
+    flex: 0 0 600px;
+    /* Significantly wider on desktop */
+    width: 600px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+    opacity: 0.5;
+    /* Start dim */
+    transform: scale(0.9);
+    /* Start small */
+    transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+}
+
+.flow-step.is-active {
+    opacity: 1;
+    transform: scale(1.0);
+    border-color: var(--accent-color);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.step-image img {
+    height: 180px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .flow-step {
+        flex: 0 0 85vw;
+        /* On mobile, take up most of width */
+        width: 85vw;
+    }
 }

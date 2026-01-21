@@ -2,9 +2,16 @@
     <div class="container">
         <div class="message-box">
             <h3 class="section-title">{{ message.title }}</h3>
-            <div class="message-content">
-                <p>{{ message.content | nl2br }}</p>
-                <div class="message-author">{{ message.doctor_name }}</div>
+            <div class="message-body">
+                {% if message.image_url %}
+                <div class="message-image">
+                    <img src="{{ message.image_url }}" alt="{{ message.doctor_name }}">
+                </div>
+                {% endif %}
+                <div class="message-content">
+                    <p class="message-text">{{ message.content | nl2br }}</p>
+                    <div class="message-author">{{ message.doctor_name }}</div>
+                </div>
             </div>
         </div>
     </div>
