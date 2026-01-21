@@ -1,0 +1,29 @@
+<section class="features" id="features">
+    <div class="container">
+        {% if features is mapping and features.title %}
+        <h3 class="section-title">{{ features.title }}</h3>
+        {% elif features.title %}
+        {# Fallback if accessed as attr #}
+        <h3 class="section-title">{{ features.title }}</h3>
+        {% else %}
+        <h3 class="section-title">選ばれる理由</h3>
+        {% endif %}
+
+        <div class="features-grid">
+            {% set items = features.data if (features is mapping and features.data) else features %}
+            {% for feature in items %}
+            <div class="feature-item">
+                <div class="feature-icon">
+                    {% if feature.icon_url %}
+                    <img src="{{ feature.icon_url }}" alt="{{ feature.title }}" loading="lazy">
+                    {% else %}
+                    {{ feature.icon }}
+                    {% endif %}
+                </div>
+                <h4>{{ feature.title }}</h4>
+                <p>{{ feature.description }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

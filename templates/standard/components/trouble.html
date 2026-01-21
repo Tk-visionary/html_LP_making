@@ -1,0 +1,19 @@
+<section class="trouble" id="trouble">
+    <div class="container">
+        <h3 class="section-title">{{ trouble.title }}</h3>
+        <div class="trouble-box element-stack">
+            <div class="trouble-list">
+                <ul>
+                    {% for item in trouble.checklist %}
+                    <li>
+                        <span class="check-mark">✔</span> {{ item }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="trouble-image">
+                <img src="{{ trouble.image_url }}" alt="Trouble Image" loading="lazy">
+            </div>
+        </div>
+    </div>
+</section>

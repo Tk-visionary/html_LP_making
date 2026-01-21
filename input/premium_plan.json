@@ -1,0 +1,72 @@
+{
+    "theme": {
+        "primary_color": "#0f172a",
+        "accent_color": "#b09b71",
+        "cta_color": "#b09b71",
+        "text_color": "#333",
+        "bg_color": "#fafafa",
+        "bg_gray_color": "#f4f4f4"
+    },
+    "meta": {
+        "title": "大人のためのプレミアム美肌 | 東京美肌堂 Premium",
+        "description": "ワンランク上の美肌治療を。医師による丁寧なカウンセリングと、厳選された医療用医薬品。"
+    },
+    "footer": {
+        "copyright": "© Tokyo Bihadado Premium"
+    },
+    "floating_cta": {
+        "text": "プレミアムカウンセリング予約",
+        "url": "https://system.bihadado.tokyo/reservation-form/premium"
+    },
+    "sections": [
+        {
+            "type": "hero",
+            "data": {
+                "headline": "時を戻す、<br>至高の美肌体験を。",
+                "subheadline": "忙しい日々に、上質なケアを。<br>完全予約制・オンライン診療で叶える、大人のための美肌習慣。",
+                "image_url": "static/images/generated/premium/hero_luxury.png",
+                "cta": {
+                    "text": "カウンセリングを予約する",
+                    "url": "#cta"
+                }
+            }
+        },
+        {
+            "type": "message",
+            "data": {
+                "title": "貴方だけのプライベートクリニック",
+                "content": "美しさは、時間と共に深まるもの。\nしかし、日々の喧騒は時にそれを忘れさせます。\n\n東京美肌堂 Premiumは、\nそんな貴方のための特別なオンラインクリニックです。\n\n待ち時間のない、貴方だけの診察室で、\n専門医が最適解をご提案いたします。",
+                "doctor_name": "統括院長"
+            }
+        },
+        {
+            "type": "features",
+            "data": [
+                {
+                    "title": "厳選された処方",
+                    "description": "一般には流通しない、高濃度・高品質な医療用医薬品のみを取り扱っております。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_1.png"
+                },
+                {
+                    "title": "専任ドクター制",
+                    "description": "毎回同じ医師が担当。貴方の肌の些細な変化も見逃しません。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_2.png"
+                },
+                {
+                    "title": "コンシェルジュ",
+                    "description": "配送や決済のご相談は、専用コンシェルジュが24時間体制でサポート。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_3.png"
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "data": {
+                "title": "美しさへの投資。",
+                "description": "初回カウンセリングは無料です。",
+                "button_text": "予約枠を確認する",
+                "url": "https://system.bihadado.tokyo/reservation-form/premium"
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+<section class="bottom-cta" id="cta">
+    <div class="container">
+        <div class="cta-box">
+            <h3>{{ cta.title | default('美肌治療を、もっと身近に。') }}</h3>
+            <p>{{ cta.description | default('まずはオンライン診察で、あなたのお悩みをお聞かせください。') }}</p>
+            <a href="{{ cta.url | default(hero.cta.url if hero is defined else '#') }}"
+                class="btn btn-primary btn-lg">{{ cta.button_text | default(cta.text) | default(hero.cta.text if hero is
+                defined else '無料で相談する') }}</a>
+        </div>
+    </div>
+</section>

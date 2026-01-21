@@ -1,0 +1,68 @@
+{
+    "theme": {
+        "primary_color": "#d4af37",
+        "accent_color": "#f8f0e3",
+        "cta_color": "#d4af37",
+        "text_color": "#4a4a4a",
+        "bg_color": "#fffdf5",
+        "bg_gray_color": "#faf7f0"
+    },
+    "meta": {
+        "title": "花嫁のための美肌内服セット | Wedding Beauty",
+        "description": "最高の一日のために。ドレスに負けない透明感を、内側から。"
+    },
+    "footer": {
+        "copyright": "© Wedding Beauty by Tokyo Bihadado"
+    },
+    "floating_cta": {
+        "text": "花嫁カウンセリング",
+        "url": "#cta"
+    },
+    "sections": [
+        {
+            "type": "hero",
+            "data": {
+                "layout": "split",
+                "headline": "その日のために、<br>最高の発光肌を。",
+                "subheadline": "挙式まであと3ヶ月。\nエステだけでは届かない「内側からの透明感」を医療の力で。",
+                "image_url": "static/images/hero_spring.png",
+                "cta": {
+                    "text": "ブライダルセットを見る",
+                    "url": "#cta"
+                }
+            }
+        },
+        {
+            "type": "message",
+            "data": {
+                "title": "一生残る写真だから。",
+                "content": "ドレス、ヘアメイク、そして最後は「素肌」です。\n高画質な写真に残るその瞬間に、自信を持って笑えますか？\n\n表面的なケアだけでなく、医療用内服薬で\n身体の中から輝きを引き出します。",
+                "doctor_name": "美容皮膚科医"
+            }
+        },
+        {
+            "type": "features",
+            "data": [
+                {
+                    "title": "美白特化処方",
+                    "description": "トラネキサム酸・シナールなど、透明感を引き出す成分を厳選配合。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_1.png"
+                },
+                {
+                    "title": "背中・デコルテも",
+                    "description": "飲むケアなら、ケアしにくい背中やデコルテまで全身美肌へ。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_2.png"
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "data": {
+                "title": "最高の準備を始めましょう。",
+                "description": "挙式スケジュールに合わせた処方プランをご提案します。",
+                "button_text": "無料カウンセリング予約",
+                "url": "#book"
+            }
+        }
+    ]
+}

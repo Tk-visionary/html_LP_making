@@ -1,0 +1,57 @@
+<style>
+    /* Always enforce strict font for legal section regardless of theme */
+    .legal-section {
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif !important;
+        letter-spacing: 0.05em;
+    }
+
+    .legal-title {
+        font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif !important;
+    }
+</style>
+<section class="legal-section">
+    <div class="container">
+        <div class="legal-content">
+            <h4 class="legal-title">【必ずお読みください】</h4>
+
+            <dl class="legal-list">
+                <dt>治療内容について</dt>
+                <dd>
+                    当サービスは自由診療（保険適用外）です。<br>
+                    医師がオンラインで診察を行い、医薬品を処方します。
+                </dd>
+
+                <dt>費用・治療期間について</dt>
+                <dd>
+                    初月: {{ legal.price_min | default('880円') }}〜{{ legal.price_max | default('12,000円') }} (税込)<br>
+                    2ヶ月目以降: {{ legal.price_regular_min | default('4,000円') }}〜{{ legal.price_regular_max |
+                    default('15,000円') }} (税込)<br>
+                    治療期間: 一般的に3〜6ヶ月程度を推奨します。
+                </dd>
+
+                <dt>リスク・副作用</dt>
+                <dd>
+                    {{ legal.risks | default('医薬品には副作用のリスクがあります。赤み、乾燥、皮むけなどが生じる場合があります。医師の指示に従って使用してください。') }}
+                </dd>
+
+                <dt>お問い合わせ</dt>
+                <dd>
+                    運営事務局: {{ legal.contact_email | default('info@latrico.jp') }}<br>
+                    ※お薬に関する相談は、公式LINEにて医師・薬剤師が対応いたします。
+                </dd>
+
+                <dt>運営会社</dt>
+                <dd>
+                    {{ legal.company_name | default('株式会社ラトリコ') }}<br>
+                    {{ legal.company_address | default('東京都港区...') }}
+                </dd>
+            </dl>
+
+            <p class="legal-note">
+                ※本キャンペーンは予告なく変更・終了する場合がございます。<br>
+                ※未成年の方は保護者の同意が必要です。<br>
+                ※2020年10月1日〜2025年10月30日時点の東京美肌堂の累計利用者数 400,001人
+            </p>
+        </div>
+    </div>
+</section>

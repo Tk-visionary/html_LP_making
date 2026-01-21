@@ -1,0 +1,5 @@
+<div class="floating-cta" id="floating-cta">
+    <a href="{{ floating_cta.url | default(hero.cta.url if hero is defined else '#') }}" class="btn btn-cta pulse-anim">
+        {{ floating_cta.text | default('簡単1分で完了！<br><span class="cta-main-text">診察予約はこちら</span>') | safe }}
+    </a>
+</div>

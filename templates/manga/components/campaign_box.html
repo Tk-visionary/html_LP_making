@@ -1,0 +1,26 @@
+<section class="campaign-section" id="{{ section.id | default('campaign') }}">
+    <div class="container">
+        <div class="campaign-box">
+            {% if campaign.title %}
+            <h3 class="campaign-title">{{ campaign.title }}</h3>
+            {% endif %}
+
+            <div class="campaign-visual">
+                <img src="{{ campaign.image_url }}" alt="{{ campaign.alt | default('Campaign') }}" loading="lazy">
+            </div>
+
+            <div class="campaign-text-area">
+                {% set amount = campaign.amount | default('7,000') %}
+                {% for note in campaign.notes %}
+                <p class="campaign-note">{{ note | replace('{amount}', amount) | safe }}</p>
+                {% endfor %}
+            </div>
+
+            {% if campaign.cta %}
+            <div class="campaign-cta-wrapper">
+                <a href="{{ campaign.cta.url }}" class="btn btn-cta pulse-anim">{{ campaign.cta.text }}</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</section>

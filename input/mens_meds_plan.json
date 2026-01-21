@@ -1,0 +1,72 @@
+{
+    "theme": {
+        "primary_color": "#005baa",
+        "accent_color": "#00ffcc",
+        "cta_color": "#00ffcc",
+        "text_color": "#e0e0e0",
+        "bg_color": "#0b1120",
+        "bg_gray_color": "#1a2333"
+    },
+    "meta": {
+        "title": "男の肌は、飲むだけで変える。 | MEN'S MEDS",
+        "description": "塗るケアはもう古い。内服薬で攻める、最短ルートの男の美肌。"
+    },
+    "footer": {
+        "copyright": "© MEN'S MEDS by Tokyo Bihadado"
+    },
+    "floating_cta": {
+        "text": "オンライン診療を予約する",
+        "url": "#cta"
+    },
+    "sections": [
+        {
+            "type": "hero",
+            "data": {
+                "headline": "塗るケアは、<br>もう古い。",
+                "subheadline": "男の肌トラブルは「飲む」だけで解決できる。<br>ベタつく化粧水は一切不要。",
+                "image_url": "static/images/hero_acne.png",
+                "cta": {
+                    "text": "処方薬を見る",
+                    "url": "#cta"
+                }
+            }
+        },
+        {
+            "type": "trouble",
+            "data": {
+                "title": "こんな「無駄」していませんか？",
+                "image_url": "static/images/comic_trouble_1.png",
+                "items": [
+                    "毎日何種類もの化粧水を塗っている",
+                    "高価な洗顔料を使ってもニキビが治らない",
+                    "ヒゲ剃り負けを放置している",
+                    "クリニックに行く時間が全くない"
+                ]
+            }
+        },
+        {
+            "type": "features",
+            "data": [
+                {
+                    "title": "最短ルート",
+                    "description": "医師が処方する医療用医薬品だから、市販薬とは成分量が違います。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_1.png"
+                },
+                {
+                    "title": "1日1回",
+                    "description": "飲むだけ。洗面所での面倒なケアから解放されます。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_2.png"
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "data": {
+                "title": "スマートな男は、内側から治す。",
+                "description": "オンライン診療なら、誰にも会わずに薬が届きます。",
+                "button_text": "今すぐ診療予約 (約5分)",
+                "url": "#book"
+            }
+        }
+    ]
+}

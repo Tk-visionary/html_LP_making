@@ -1,0 +1,22 @@
+<section class="message" id="message">
+    <div class="container">
+        <div class="message-box">
+            <h3 class="section-title">{{ message.title }}</h3>
+            <div class="message-body"
+                style="display: flex; gap: 40px; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
+                {% if message.image_url %}
+                <div class="message-image" style="flex: 0 0 240px;">
+                    <img src="{{ message.image_url }}" alt="{{ message.doctor_name }}"
+                        style="border-radius: 4px; width: 100%; box-shadow: 0 10px 20px rgba(0,0,0,0.1);">
+                </div>
+                {% endif %}
+                <div class="message-content" style="flex: 1; min-width: 300px;">
+                    <p style="text-align: left;">{{ message.content | nl2br }}</p>
+                    <div class="message-author"
+                        style="margin-top: 30px; font-family: 'Shippori Mincho', serif; font-size: 1.2rem; text-align: right;">
+                        {{ message.doctor_name }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

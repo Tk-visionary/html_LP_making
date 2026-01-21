@@ -1,0 +1,28 @@
+<section class="comic-strip-section" id="{{ section.id | default('comic') }}">
+    <div class="comic-container">
+        {% if comic_strip.title %}
+        <h3 class="comic-title">{{ comic_strip.title }}</h3>
+        {% endif %}
+
+        <div class="comic-stack">
+            {% for frame in comic_strip.frames %}
+            <div class="comic-frame" style="position: relative;">
+                <img src="{{ frame.image_url }}" alt="{{ frame.alt | default('Comic Frame') }}" loading="lazy">
+                {% if frame.caption %}
+                <div class="comic-caption">{{ frame.caption }}</div>
+                {% endif %}
+
+                {# Speech Bubbles #}
+                {% if frame.bubbles %}
+                {% for bubble in frame.bubbles %}
+                <div class="comic-bubble {{ bubble.type|default('normal') }} {{ bubble.tail_position|default('bottom-left') }}"
+                    style="top: {{ bubble.y }}%; left: {{ bubble.x }}%; width: {{ bubble.width|default('auto') }};">
+                    {{ bubble.text | safe }}
+                </div>
+                {% endfor %}
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

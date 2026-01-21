@@ -1,0 +1,22 @@
+<section class="slider-section" id="slider">
+    <div class="container">
+        <h3 class="section-title">{{ slider.title }}</h3>
+        <p class="section-desc">{{ slider.description }}</p>
+
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for item in slider.reviews %}
+                <div class="swiper-slide">
+                    <img src="{{ item.image_url }}" alt="Review Image" loading="lazy">
+                    {% if item.comment %}
+                    <div class="slide-comment">{{ item.comment }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+</section>

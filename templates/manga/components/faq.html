@@ -1,0 +1,13 @@
+<section class="faq" id="faq">
+    <div class="container">
+        <h3 class="section-title">よくある質問</h3>
+        <div class="faq-list">
+            {% for item in faq %}
+            <div class="faq-item">
+                <div class="faq-q">Q. {{ item.q }}</div>
+                <div class="faq-a">A. {{ item.a }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

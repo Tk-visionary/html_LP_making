@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ meta.title }}</title>
+    <meta name="description" content="{{ meta.description }}">
+    <link rel="stylesheet" href="static/css/destyle.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Simplified Header for Ad LP -->
+    <header class="site-header-simple">
+        <div class="container">
+            <div class="logo-wrapper">
+                <img src="https://bihadado.tokyo/images/common/logo.png" alt="東京美肌堂" style="height: 40px;">
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    {% include "legal_footer.html" %}
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="copyright" style="font-family: 'Noto Sans JP', sans-serif;">{{ footer.copyright }}</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,226 @@
+{
+    "theme": {
+        "primary_color": "#ffb7b2",
+        "accent_color": "#e27d60",
+        "cta_color": "#ff9b9b",
+        "text_color": "#5d4037",
+        "bg_color": "#fffbf7",
+        "bg_gray_color": "#fdf5e6"
+    },
+    "meta": {
+        "title": "ママの肌荒れ、諦めないで | 東京美肌堂",
+        "description": "忙しいママへ。皮膚科に行けなくても、スマホで隙間時間に美肌治療。"
+    },
+    "footer": {
+        "copyright": "© Tokyo Bihadado"
+    },
+    "floating_cta": {
+        "text": "子供が寝ている間に診察",
+        "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
+    },
+    "sections": [
+        {
+            "type": "hero",
+            "data": {
+                "title": "自分のこと、<br>後回しにしてない？",
+                "subtitle": "育児・家事に追われるママへ。<br>スマホで完結する「おうち皮膚科」始めませんか？",
+                "image_url": "static/images/generated/busy_mom/hero_mom.png",
+                "cta": {
+                    "text": "詳細を見る",
+                    "url": "#cta"
+                }
+            }
+        },
+        {
+            "type": "comic_strip",
+            "data": {
+                "title": "ママの1日・あるある",
+                "frames": [
+                    {
+                        "image_url": "static/images/generated/busy_mom/comic_1.png",
+                        "alt": "病院に行けない",
+                        "caption": "「肌荒れ酷いけど、子供連れて皮膚科で2時間待ちは無理…」",
+                        "bubbles": [
+                            {
+                                "text": "あっ...<br>またニキビ<br>できてる...",
+                                "x": 82,
+                                "y": 25,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-left"
+                            },
+                            {
+                                "text": "子供がいると<br>皮膚科なんて<br>行けない...",
+                                "x": 18,
+                                "y": 30,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-right"
+                            }
+                        ]
+                    },
+                    {
+                        "image_url": "static/images/generated/busy_mom/comic_2.png",
+                        "alt": "スマホで診察",
+                        "caption": "「えっ、オンライン？子供がお昼寝してる間に診察できた！」",
+                        "bubbles": [
+                            {
+                                "text": "スマホで<br>診察して<br>くれるんだ！",
+                                "x": 78,
+                                "y": 30,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-left"
+                            },
+                            {
+                                "text": "これなら<br>お昼寝中に<br>終わる♪",
+                                "x": 22,
+                                "y": 25,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-right"
+                            }
+                        ]
+                    },
+                    {
+                        "image_url": "static/images/generated/busy_mom/comic_3.png",
+                        "alt": "薬が届く",
+                        "caption": "「お薬もポストに届くから、買い物ついでに受け取れる♪」",
+                        "bubbles": [
+                            {
+                                "text": "わっ、もう<br>お薬届いた！",
+                                "x": 80,
+                                "y": 25,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-left"
+                            },
+                            {
+                                "text": "ポスト投函で<br>受け取り楽々",
+                                "x": 20,
+                                "y": 25,
+                                "width": "auto",
+                                "tail_position": "tail-bottom-right"
+                            }
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "type": "campaign_box",
+            "data": {
+                "title": "ママ応援キャンペーン",
+                "image_url": "static/images/generated/spring_break_acne/hero_spring.png",
+                "alt": "初回限定 {amount}円クーポン",
+                "amount": "7,000",
+                "notes": [
+                    "※{amount}円クーポンについてはほかのクーポンとの併用はできません。",
+                    "※クーポンは①②のいずれかを満たした場合、初回決済時にご利用いただけます。",
+                    "※本キャンペーンは、予告なく変更または終了する場合がございますので、あらかじめご了承ください。",
+                    "※問い合わせ先: 東京美肌堂運営事務局 info@latrico.jp"
+                ],
+                "cta": {
+                    "text": "クーポンを使って予約する",
+                    "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
+                }
+            }
+        },
+        {
+            "type": "features",
+            "data": [
+                {
+                    "title": "待ち時間ゼロ",
+                    "description": "予約時間にスマホを開くだけ。移動時間もなし。",
+                    "icon_url": "static/images/common/features/icon_time.png"
+                },
+                {
+                    "title": "すっぴんOK",
+                    "description": "自宅だから、メイクも準備も不要です。",
+                    "icon_url": "static/images/common/features/icon_video.png"
+                },
+                {
+                    "title": "夜22時まで",
+                    "description": "子供を寝かしつけた後の、夜遅くでも診察可能。",
+                    "icon_url": "static/images/common/features/icon_delivery.png"
+                }
+            ]
+        },
+        {
+            "type": "features",
+            "data": {
+                "title": "処方薬について",
+                "subtitle": "医療用医薬品成分が、美肌へ導きます。",
+                "description": "成分のご紹介",
+                "data": [
+                    {
+                        "title": "アスコルビン酸<br>パントテン酸カルシウム",
+                        "description": "シミの原因を抑え美白が期待できると同時に、エイジングケアにも。",
+                        "icon": "💊"
+                    },
+                    {
+                        "title": "トラネキサム酸",
+                        "description": "シミ・肝斑の第一選択薬。メラニンの生成を抑制します。",
+                        "icon": "💊"
+                    },
+                    {
+                        "title": "L-システイン",
+                        "description": "ターンオーバーを正常化し、ニキビや肌荒れを改善します。",
+                        "icon": "💊"
+                    },
+                    {
+                        "title": "ビタミンE",
+                        "description": "「若返りのビタミン」。強力な抗酸化作用で血行を促進。",
+                        "icon": "💊"
+                    },
+                    {
+                        "title": "グルタチオン",
+                        "description": "白玉点滴の主成分。強力な抗酸化作用で美白・デトックス。",
+                        "icon": "💊"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "faq",
+            "data": [
+                {
+                    "q": "東京美肌堂とは？",
+                    "a": "オンライン診察を行う医師と患者様をつなぐサービスです。"
+                },
+                {
+                    "q": "スマホだけで受診できますか？",
+                    "a": "はい、問診から診察、配送まで公式LINEで完結します。"
+                },
+                {
+                    "q": "保険証は必要ですか？",
+                    "a": "いいえ、自由診療のため保険証は不要です。"
+                },
+                {
+                    "q": "診察時間は？",
+                    "a": "問診記入後、約10分程度で完了します。"
+                },
+                {
+                    "q": "薬のみの購入は？",
+                    "a": "医師の判断により、単品での処方も可能です。"
+                },
+                {
+                    "q": "今症状がなくても受診できますか？",
+                    "a": "可能です。予防医療としてもご利用いただけます。"
+                },
+                {
+                    "q": "他の薬との飲み合わせは？",
+                    "a": "問診時に医師にご相談ください。"
+                },
+                {
+                    "q": "予約変更はできますか？",
+                    "a": "LINEにてご連絡いただければ承ります。"
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "data": {
+                "title": "ママだって、綺麗でいたい。",
+                "description": "まずは無料の肌診断から。",
+                "button_text": "予約枠を確認する",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
+            }
+        }
+    ]
+}

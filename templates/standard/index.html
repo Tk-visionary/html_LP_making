@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if sections %}
+{# Dynamic Layout Mode #}
+{% for section in sections %}
+
+{% if section.type == 'hero' %}
+{% set hero = section.data %}
+{% include "components/hero.html" %}
+
+{% elif section.type == 'trouble' %}
+{% set trouble = section.data %}
+{% include "components/trouble.html" %}
+
+{% elif section.type == 'solution' %}
+{% set solution = section.data %}
+{% include "components/solution.html" %}
+
+{% elif section.type == 'concept' %}
+{% set concept = section.data %}
+{% include "components/concept.html" %}
+
+{% elif section.type == 'slider' or section.type == 'voice' %}
+{% set slider = section.data %}
+{% include "components/slider.html" %}
+
+{% elif section.type == 'video' %}
+{% set video_section = section.data %}
+{% include "components/video.html" %}
+
+{% elif section.type == 'features' %}
+{% set features = section.data %}
+{% include "components/features.html" %}
+
+{% elif section.type == 'flow' %}
+{% set flow = section.data %}
+{% include "components/flow.html" %}
+
+{% elif section.type == 'message' %}
+{% set message = section.data %}
+{% include "components/message.html" %}
+
+{% elif section.type == 'pricing' %}
+{% set pricing = section.data %}
+{% include "components/pricing.html" %}
+
+{% elif section.type == 'faq' %}
+{% set faq = section.data %}
+{% include "components/faq.html" %}
+
+{% elif section.type == 'cta' %}
+{% set cta = section.data %}
+{% include "components/cta.html" %}
+
+{% endif %}
+
+{% endfor %}
+
+{% include "components/floating_cta.html" %}
+
+{% else %}
+{# Legacy Mode (Backward Compatibility) #}
+
+{% include "components/hero.html" %}
+
+{% include "components/trouble.html" %}
+
+{% include "components/solution.html" %}
+
+{% include "components/slider.html" %}
+
+{% if video_section %}
+{% include "components/video.html" %}
+{% endif %}
+
+{% include "components/features.html" %}
+
+{% include "components/flow.html" %}
+
+{% include "components/message.html" %}
+
+{% include "components/pricing.html" %}
+
+{% include "components/faq.html" %}
+
+{% include "components/cta.html" %}
+
+{% include "components/floating_cta.html" %}
+
+{% endif %}
+
+{% endblock %}

@@ -1,0 +1,108 @@
+{
+    "theme": {
+        "primary_color": "#ff9a9e",
+        "accent_color": "#ff5e62",
+        "cta_color": "#ffd700",
+        "text_color": "#333",
+        "bg_color": "#fff0f0",
+        "bg_gray_color": "#fff"
+    },
+    "meta": {
+        "title": "春休み中に治したい！ | 東京美肌堂",
+        "description": "新学期デビューに向けた、春休み限定の集中美肌プラン。"
+    },
+    "footer": {
+        "copyright": "© Tokyo Bihadado"
+    },
+    "floating_cta": {
+        "text": "春休み中に治す！",
+        "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
+    },
+    "sections": [
+        {
+            "type": "hero",
+            "data": {
+                "title": "春休み、<br>まだ間に合う！？",
+                "subtitle": "新学期までに「キレイになった？」って<br>言わせたくない？",
+                "image_url": "static/images/generated/spring_break_acne/hero_spring.png",
+                "cta": {
+                    "text": "春休み集中プランを見る",
+                    "url": "#cta"
+                }
+            }
+        },
+        {
+            "type": "comic_strip",
+            "data": {
+                "title": "春休みの悲劇…",
+                "frames": [
+                    {
+                        "image_url": "static/images/generated/spring_break_acne/comic_1.png",
+                        "alt": "ニキビ発見",
+                        "caption": "「えっ…！？明後日デートなのに！」"
+                    },
+                    {
+                        "image_url": "static/images/generated/spring_break_acne/comic_2.png",
+                        "alt": "オンライン診療",
+                        "caption": "「でも大丈夫！スマホで今すぐ診察予約！」"
+                    },
+                    {
+                        "image_url": "static/images/generated/spring_break_acne/comic_3.png",
+                        "alt": "解決",
+                        "caption": "「お薬届いた！これで春休みも安心♪」"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "message",
+            "data": {
+                "title": "残り1ヶ月の勝負！",
+                "content": "「マスク外した顔、見せられない…」\n「休み明け、自信を持って登校したい」\n\nそんなあなたに、朗報です。\n皮膚科に行かなくても、お家で本格治療ができます。",
+                "doctor_name": "美肌堂 センパイ"
+            }
+        },
+        {
+            "type": "trouble",
+            "data": {
+                "title": "こんな「あるある」ない？",
+                "checklist": [
+                    "不規則な生活でニキビが悪化…",
+                    "皮膚科は混んでて行きたくない",
+                    "市販薬じゃ全然治らない",
+                    "新入生歓迎会までに何とかしたい"
+                ],
+                "image_url": "https://bihadado.tokyo/images/top/about_illust.svg"
+            }
+        },
+        {
+            "type": "features",
+            "data": [
+                {
+                    "title": "スマホで完結",
+                    "description": "ベッドでゴロゴロしながら診察OK！",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_1.png"
+                },
+                {
+                    "title": "最短翌日届く",
+                    "description": "すぐ始められるから、春休みに間に合う！",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_2.png"
+                },
+                {
+                    "title": "学割プラン(仮)",
+                    "description": "お財布に優しいプランも用意してるよ。",
+                    "icon_url": "https://bihadado.tokyo/images/top/about_icon_3.png"
+                }
+            ]
+        },
+        {
+            "type": "cta",
+            "data": {
+                "title": "新学期デビューしよう。",
+                "description": "まずは無料で相談してみてね。",
+                "button_text": "今すぐ予約する",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
+            }
+        }
+    ]
+}

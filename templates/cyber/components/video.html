@@ -1,0 +1,11 @@
+<section class="video-section" id="video">
+    <div class="container">
+        <h3 class="section-title text-white">{{ video_section.title }}</h3>
+        <div class="video-wrapper">
+            <video controls poster="{{ video_section.poster_url }}">
+                <source src="{{ video_section.video_url }}" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</section>
