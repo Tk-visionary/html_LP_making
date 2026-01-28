@@ -144,6 +144,79 @@
             }
         },
         {
+            "type": "trouble",
+            "data": {
+                "title": "ママだって肌荒れする。<br>でも、こんな悩みありませんか？",
+                "checklist": [
+                    "自分のスキンケアにかけるお金や時間がない",
+                    "子供を連れて皮膚科に行くと、待ち時間でぐずるのが怖い",
+                    "「美容なんて二の次」と自分に言い聞かせている",
+                    "ふと鏡を見た時、疲れた顔の自分に落ち込む",
+                    "高い化粧品を買っても、ゆっくり塗る暇がない"
+                ],
+                "image_url": "static/images/generated/busy_mom/trouble_mom.png"
+            }
+        },
+        {
+            "type": "concept",
+            "data": {
+                "title": "ママの笑顔は、<br>家族みんなの栄養です。",
+                "description": "「子供優先」は素晴らしいこと。<br>でも、ママ自身が無理をしてボロボロになってしまっては、<br>家族も心配してしまいます。<br><br>スキンケアは、単なる美容ではありません。<br>自分を大切にする「休息の時間」であり、<br>明日も笑顔でいるためのエネルギーチャージ。<br><br>東京美肌堂は、<br>忙しいママが「罪悪感なく」<br>「最短距離で」キレイになるお手伝いをします。",
+                "image_url": "static/images/generated/busy_mom/concept_family.png"
+            }
+        },
+        {
+            "type": "solution",
+            "data": {
+                "title": "なぜ、忙しいママにこそ<br>「医療用医薬品」なのか？",
+                "description": "時間がないからこそ、<br>「なんとなく」のケアではなく<br>「確実性」の高い医療を取り入れるべきです。",
+                "points": [
+                    {
+                        "title": "最短ルートの治療",
+                        "desc": "自己判断で化粧品を試し続けるより、医師の診断で最適な薬を使う方が、結果的に時間もお金も節約になります。"
+                    },
+                    {
+                        "title": "飲むだけで全身ケア",
+                        "desc": "内服薬なら、顔だけでなく、家事で荒れがちな手や、見えない背中のケアまで同時に完了。"
+                    },
+                    {
+                        "title": "シンプルだから続く",
+                        "desc": "何ステップものスキンケアは不要。食後にさっと飲むだけなので、バタバタな毎日でも続けられます。"
+                    }
+                ]
+            }
+        },
+        {
+            "type": "features",
+            "data": {
+                "title": "ママのライフスタイルに<br>徹底的に寄り添います",
+                "subtitle": "クリニックに行く手間も、待ち時間も、もう必要ありません。",
+                "description": "",
+                "data": [
+                    {
+                        "title": "授乳中・妊娠中も安心",
+                        "description": "問診でお伝えいただければ、体に負担の少ない、安全なお薬を医師が選定します。",
+                        "icon": "👶"
+                    },
+                    {
+                        "title": "すっぴん・部屋着でOK",
+                        "description": "自宅からのビデオ通話なので、お出かけの準備は不要。子供が泣いても周りを気にする必要はありません。",
+                        "icon": "🏠"
+                    },
+                    {
+                        "title": "薬局に行かなくていい",
+                        "description": "処方薬はポストに届くので、感染症が流行っている時期に子供を連れて薬局に並ぶ必要もありません。",
+                        "icon": "📮"
+                    },
+                    {
+                        "title": "夜22時まで診察",
+                        "description": "子供を寝かしつけた後の「ひとり時間」に、ゆっくり相談できます。",
+                        "icon": "🌙"
+                    }
+                ]
+            }
+        },
+        {
             "type": "campaign_box",
             "data": {
                 "title": "ママ応援キャンペーン",
@@ -161,26 +234,6 @@
                     "url": "https://system.bihadado.tokyo/reservation-form/reserve7"
                 }
             }
-        },
-        {
-            "type": "features",
-            "data": [
-                {
-                    "title": "待ち時間ゼロ",
-                    "description": "予約時間にスマホを開くだけ。移動時間もなし。",
-                    "icon_url": "static/images/common/features/icon_time.png"
-                },
-                {
-                    "title": "すっぴんOK",
-                    "description": "自宅だから、メイクも準備も不要です。",
-                    "icon_url": "static/images/common/features/icon_video.png"
-                },
-                {
-                    "title": "夜22時まで",
-                    "description": "子供を寝かしつけた後の、夜遅くでも診察可能。",
-                    "icon_url": "static/images/common/features/icon_delivery.png"
-                }
-            ]
         },
         {
             "type": "features",

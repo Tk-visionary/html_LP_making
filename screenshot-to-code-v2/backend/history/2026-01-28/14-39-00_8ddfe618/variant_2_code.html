@@ -1,0 +1,78 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(to right, #f8f9fa 0%, #ffffff 100%);
+        }
+        .cta-gradient {
+            background: linear-gradient(to right, #86efac, #0ea5e9);
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="max-w-6xl w-full bg-white rounded-[40px] overflow-hidden shadow-2xl relative flex flex-col md:flex-row">
+        <!-- Left Content Section -->
+        <div class="flex-1 p-12 md:p-20 z-10">
+            <h1 class="text-5xl md:text-6xl font-black text-gray-900 leading-tight mb-4">
+                化粧品・レーザーでは<br>
+                届かない<span class="text-[#ff8da1]">99%</span>へ。
+            </h1>
+            
+            <div class="text-xl md:text-2xl font-bold text-gray-800 mb-10 leading-relaxed">
+                肌は内側から作られる。<br>
+                だから、内側から届ける<span class="text-[#6eb5c0]">美肌治療</span>。
+            </div>
+
+            <div class="flex flex-wrap gap-3 mb-12">
+                <span class="border border-[#a5d1d8] text-[#6eb5c0] px-6 py-2 rounded-full text-lg font-medium">
+                    累計40万人利用
+                </span>
+                <span class="border border-[#a5d1d8] text-[#6eb5c0] px-6 py-2 rounded-full text-lg font-medium">
+                    医薬品処方
+                </span>
+                <span class="border border-[#a5d1d8] text-[#6eb5c0] px-6 py-2 rounded-full text-lg font-medium">
+                    6ヶ月で80%効果実感
+                </span>
+            </div>
+
+            <div class="flex flex-col items-center md:items-start">
+                <button class="cta-gradient text-white text-2xl md:text-3xl font-bold py-5 px-16 rounded-full shadow-xl hover:opacity-90 transition-opacity mb-4">
+                    無料で診察を予約する
+                </button>
+                <p class="text-xl font-bold text-gray-800">
+                    診察料・処方料0円 / スマホで10分
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Image Section -->
+        <div class="flex-1 relative min-h-[400px] md:min-h-full">
+            <img src="https://placehold.co/800x1000?text=Smiling+Female+Doctor+in+Lab+Coat+Holding+Medicine" 
+                 alt="A smiling Japanese female doctor in a white lab coat, holding several blister packs of pills and two medicine bottles (one white, one brown) in her hands." 
+                 class="absolute inset-0 w-full h-full object-cover object-center">
+            
+            <!-- Decorative Sparkle Icon -->
+            <div class="absolute bottom-8 right-8 text-white opacity-50">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Footer Disclaimer -->
+        <div class="absolute bottom-4 left-12 md:left-20 text-[10px] md:text-xs text-gray-600 z-20">
+            ※累計利用者数は2020年10月1日〜2025年10月30日 ※効果実感率は2025年9月調査、利用者498名対象
+        </div>
+    </div>
+</body>
+</html>
