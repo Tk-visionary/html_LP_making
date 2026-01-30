@@ -1,0 +1,40 @@
+{
+    "meta": {
+        "title": "【公式】東京美肌堂 | オンライン診療ではじめる美容内服",
+        "description": "化粧品・レーザーでは届かない99%へ。肌は内側から作られる。だから、内側から届ける美肌治療。"
+    },
+    "sections": [
+        {
+            "id": "fv",
+            "type": "image_with_cta",
+            "image_url": "static/images/fv_image.png",
+            "cta": {
+                "text": "無料で診察を予約する",
+                "subtext": "診察料・処方料0円 / スマホで10分",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7?cp=2022033000&flow_type=0&line_flow=7&step=1&ad_code=fb_003722_ac04_MOV_mk-00495_p2_ank90_mk00212&fpc=6255.57.365.0606f79b5b6c8ccp.1800010047000&_gl=1*ouczbd*_gcl_au*OTI1MjczMjcwLjE3NjUyNDIwNDk.",
+                "animation": "float",
+                "position_bottom": "5%"
+            }
+        },
+        {
+            "id": "explanation",
+            "type": "pure_image",
+            "image_url": "static/images/explanation_image.png"
+        },
+        {
+            "id": "final_cta",
+            "type": "image_with_cta",
+            "image_url": "static/images/explanation_image.png",
+            "cta": {
+                "text": "無料で診察を予約する",
+                "subtext": "診察料・処方料0円 / スマホで10分",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7?cp=2022033000&flow_type=0&line_flow=7&step=1&ad_code=fb_003722_ac04_MOV_mk-00495_p2_ank90_mk00212&fpc=6255.57.365.0606f79b5b6c8ccp.1800010047000&_gl=1*ouczbd*_gcl_au*OTI1MjczMjcwLjE3NjUyNDIwNDk.",
+                "animation": "float",
+                "position_bottom": "2%"
+            }
+        }
+    ],
+    "footer": {
+        "copyright": "© Tokyo Bihadado"
+    }
+}

@@ -1,0 +1,119 @@
+{
+    "meta": {
+        "title": "化粧品・レーザーでは届かない99%へ。内側から届ける美肌治療",
+        "description": "肌は内側から作られる。だから、内側から届ける美肌治療。根本から解決する内服治療で、あなたの理想の肌へ。"
+    },
+    "hero": {
+        "headline": "化粧品・レーザーでは<br>届かない<span class='highlight'>99%</span>へ。",
+        "subheadline": "肌は内側から作られる。<br>だから、内側から届ける美肌治療。",
+        "image_url": "https://placehold.jp/800x1200.png?text=Inner%20Beauty%20Hero",
+        "cta": {
+            "text": "無料で診察を予約する",
+            "url": "https://system.bihadado.tokyo/reservation-form/reserve7?cp=2022033000&flow_type=0&line_flow=7&step=1&ad_code=fb_003722_ac04_MOV_mk-00495_p2_ank90_mk00212&fpc=6255.57.365.0606f79b5b6c8ccp.1800010047000&_gl=1*ouczbd*_gcl_au*OTI1MjczMjcwLjE3NjUyNDIwNDk."
+        },
+        "stats": [
+            "累計40万人利用",
+            "医薬品処方",
+            "6ヶ月で80%効果実感"
+        ]
+    },
+    "trouble": {
+        "title": "なぜ、何をやっても<br>変わらなかったのか。",
+        "description": "本当に変えたいなら、肌が作られる『内側』からアプローチする必要があったのです。",
+        "items": [
+            {
+                "title": "化粧品は、肌の1%にしか届かない。",
+                "desc": "角質層までしか届かず、残り99%には届いていませんでした。"
+            },
+            {
+                "title": "レーザーは、表面を焼くだけ。",
+                "desc": "根本的な解決にはなっていませんでした。"
+            }
+        ],
+        "image_url": "https://placehold.jp/600x400.png?text=Trouble%20Mechanism"
+    },
+    "solution": {
+        "title": "だから、内側から届ける。<br>99%に届く、飲む美肌治療。",
+        "description": "サプリではなく、医薬品。医師があなたに合った薬を選ぶ。",
+        "points": [
+            {
+                "title": "根本解決",
+                "desc": "肌のターンオーバーを内側から整え、トラブルの元に直接アプローチ。"
+            },
+            {
+                "title": "医師による処方",
+                "desc": "医療用医薬品だからこそ出せる確かな効果。"
+            }
+        ]
+    },
+    "features": [
+        {
+            "title": "累計利用者数 40万人",
+            "description": "多くの方に選ばれている信頼の実績。",
+            "icon": "🏆"
+        },
+        {
+            "title": "在籍医師数 92名",
+            "description": "提携クリニックの専門医がしっかりサポート。",
+            "icon": "👨‍⚕️"
+        },
+        {
+            "title": "顧客満足度 95%",
+            "description": "高い満足度が安心の証です。",
+            "icon": "✨"
+        }
+    ],
+    "flow": {
+        "title": "手軽に、確実に。<br>美肌治療の4ステップ。",
+        "steps": [
+            {
+                "step": 1,
+                "title": "3分で予約",
+                "description": "24時間OK、当日予約可。"
+            },
+            {
+                "step": 2,
+                "title": "10分でオンライン診察",
+                "description": "ビデオ通話、待ち時間なし。"
+            },
+            {
+                "step": 3,
+                "title": "最短翌日に届く",
+                "description": "自宅に直接配送。"
+            },
+            {
+                "step": 4,
+                "title": "1日1袋、飲むだけ",
+                "description": "個別包装で簡単。"
+            }
+        ]
+    },
+    "pricing": {
+        "title": "プラン例（税込）",
+        "plans": [
+            {
+                "name": "美容内服入門セット",
+                "price": "4,180",
+                "period": "月",
+                "description": "美容の基本をこの1つで。複数悩みを同時ケアしたい方に。",
+                "badge": "Entry"
+            },
+            {
+                "name": "とことん美白対策セット",
+                "price": "9,680",
+                "period": "月",
+                "description": "シミ・くすみを集中ケア。透明感のある肌を目指す方に。",
+                "badge": "Popular"
+            }
+        ],
+        "note": "※上記費用にお薬代・配送料が含まれます。診察料は無料です。"
+    },
+    "message": {
+        "title": "私たちがサポートします",
+        "content": "「忙しくてクリニックに行けない」「どの薬が自分に合うかわからない」\nそんな悩みを持つ方にこそ、オンライン診療を活用していただきたいです。\n確かな医療の力で、あなたの理想の肌へ導きます。",
+        "doctor_name": "提携医師一同"
+    },
+    "footer": {
+        "copyright": "© Inner Beauty Clinic"
+    }
+}

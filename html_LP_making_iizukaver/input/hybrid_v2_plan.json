@@ -1,0 +1,41 @@
+{
+    "meta": {
+        "title": "【公式】東京美肌堂 | 高画質ハイブリッドLP",
+        "description": "スライス画像連結による高画質化と、正確なボタン配置を実現。"
+    },
+    "sections": [
+        {
+            "id": "slice_01",
+            "image_url": "static/images/slice_01.png",
+            "cta": {
+                "text": "無料で診察を予約する",
+                "subtext": "診察料・処方料0円 / スマホで10分",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7?cp=2022033000&flow_type=0&line_flow=7&step=1&ad_code=fb_003722_ac04_MOV_mk-00495_p2_ank90_mk00212&fpc=6255.57.365.0606f79b5b6c8ccp.1800010047000&_gl=1*ouczbd*_gcl_au*OTI1MjczMjcwLjE3NjUyNDIwNDk.",
+                "animation": "float",
+                "position_bottom": "5%"
+            }
+        },
+        { "id": "slice_02", "image_url": "static/images/slice_02.png" },
+        { "id": "slice_03", "image_url": "static/images/slice_03.png" },
+        { "id": "slice_04", "image_url": "static/images/slice_04.png" },
+        { "id": "slice_05", "image_url": "static/images/slice_05.png" },
+        { "id": "slice_06", "image_url": "static/images/slice_06.png" },
+        { "id": "slice_07", "image_url": "static/images/slice_07.png" },
+        { "id": "slice_08", "image_url": "static/images/slice_08.png" },
+        { "id": "slice_09", "image_url": "static/images/slice_09.png" },
+        {
+            "id": "slice_10",
+            "image_url": "static/images/slice_10.png",
+            "cta": {
+                "text": "無料で診察を予約する",
+                "subtext": "診察料・処方料0円 / スマホで10分",
+                "url": "https://system.bihadado.tokyo/reservation-form/reserve7?cp=2022033000&flow_type=0&line_flow=7&step=1&ad_code=fb_003722_ac04_MOV_mk-00495_p2_ank90_mk00212&fpc=6255.57.365.0606f79b5b6c8ccp.1800010047000&_gl=1*ouczbd*_gcl_au*OTI1MjczMjcwLjE3NjUyNDIwNDk.",
+                "animation": "float",
+                "position_bottom": "5%"
+            }
+        }
+    ],
+    "footer": {
+        "copyright": "© Tokyo Bihadado"
+    }
+}

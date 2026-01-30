@@ -1,0 +1,20 @@
+<section class="pricing" id="pricing">
+    <div class="container">
+        <h3 class="section-title">{{ pricing.title }}</h3>
+        <div class="plans-grid">
+            {% for plan in pricing.plans %}
+            <div class="plan-card">
+                {% if plan.badge %}
+                <div class="plan-badge">{{ plan.badge }}</div>
+                {% endif %}
+                <h4 class="plan-name">{{ plan.name }}</h4>
+                <div class="plan-price">
+                    <span class="price-val">{{ plan.price }}</span>円 / {{ plan.period }}
+                </div>
+                <p class="plan-desc">{{ plan.description }}</p>
+                <a href="#" class="btn btn-primary btn-sm">選択する</a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

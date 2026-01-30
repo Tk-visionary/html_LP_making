@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="hybrid-v2-container">
+    {% for section in sections %}
+        <section class="v2-section" id="{{ section.id }}">
+            <div class="v2-image-wrapper">
+                <img src="{{ section.image_url }}" alt="" class="v2-slice-img">
+                
+                {% if section.cta %}
+                <div class="v2-cta-overlay" style="bottom: {{ section.cta.position_bottom | default('10%') }};">
+                    <a href="{{ section.cta.url }}" class="v2-btn-cta {{ section.cta.animation }}-anim">
+                        <span class="v2-btn-main">{{ section.cta.text }}</span>
+                        {% if section.cta.subtext %}
+                        <span class="v2-btn-sub">{{ section.cta.subtext }}</span>
+                        {% endif %}
+                    </a>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+    {% endfor %}
+</div>
+
+<style>
+/* 隙間を完全に排除する設定 */
+.hybrid-v2-container {
+    width: 100%;
+    max-width: 800px; /* LPの標準的な幅 */
+    margin: 0 auto;
+    background-color: #fff;
+    line-height: 0;
+    font-size: 0;
+}
+
+.v2-section {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.v2-image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.v2-slice-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: none;
+}
+
+/* ボタンの絶対配置（画像に対して相対的） */
+.v2-cta-overlay {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 500px;
+    z-index: 10;
+    line-height: 1.4; /* テキスト用に戻す */
+}
+
+.v2-btn-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #81c784 0%, #4caf50 100%);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    border: 2px solid #fff;
+    font-family: "Noto Sans JP", sans-serif;
+}
+
+.v2-btn-main {
+    font-size: 1.6rem;
+    font-weight: bold;
+    display: block;
+}
+
+.v2-btn-sub {
+    font-size: 0.8rem;
+    margin-top: 4px;
+    display: block;
+}
+
+/* アニメーション */
+.float-anim {
+    animation: v2-float 3s ease-in-out infinite;
+}
+
+@keyframes v2-float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+/* スマホ最適化 */
+@media (max-width: 768px) {
+    .v2-btn-main {
+        font-size: 1.2rem;
+    }
+    .v2-btn-sub {
+        font-size: 0.7rem;
+    }
+    .v2-cta-overlay {
+        width: 85%;
+    }
+}
+</style>
+{% endblock %}

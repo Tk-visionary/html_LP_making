@@ -1,0 +1,35 @@
+# Load environment variables first
+from dotenv import load_dotenv
+from pathlib import Path
+
+load_dotenv()
+
+
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from routes import screenshot, generate_code, home, evals, templates, history
+
+app = FastAPI(openapi_url=None, docs_url=None, redoc_url=None)
+
+# Configure CORS settings
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Setup static file serving for cropped images
+static_dir = Path(__file__).parent / "static" / "cropped"
+static_dir.mkdir(parents=True, exist_ok=True)
+app.mount("/static/cropped", StaticFiles(directory=str(static_dir)), name="cropped")
+
+# Add routes
+app.include_router(generate_code.router)
+app.include_router(screenshot.router)
+app.include_router(home.router)
+app.include_router(evals.router)
+app.include_router(templates.router)
+app.include_router(history.router)

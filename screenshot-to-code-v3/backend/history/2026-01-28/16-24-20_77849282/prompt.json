@@ -1,0 +1,12 @@
+{
+  "input_mode": "image",
+  "generation_type": "update",
+  "prompt": {
+    "text": "",
+    "images": [
+      null
+    ]
+  },
+  "is_imported_from_code": false,
+  "parent_session_id": null
+}
